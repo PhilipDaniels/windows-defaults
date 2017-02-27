@@ -1,0 +1,6 @@
+# Turn off line ending normalization. This repository is mixed - there
+# are Unix files that need LF endings and Windows files that need CRLF endings.
+* -text
+
+* whitespace=cr-at-eol
+

@@ -15,6 +15,20 @@ but a surprisingly large number remain on their default keys.
 This layer installs a minimal set of small packages, it doesn't bring in
 anything heavyweight, just enough to create some handy keybindings.
 
+### Installation
+
+The easiest way is to clone this repo directly into your Spacemacs *layers* folder:
+
+    git clone https://github.com/PhilipDaniels/windows-defaults ~/.emacs.d/layers/windows-defaults
+
+Alternatively, you can clone to an arbitrary folder, but you must add that
+folder to your custom layer load path, for example:
+
+    dotspacemacs-configuration-layer-path '("~/repos/spacemacs")
+
+After either of the above, then just add `windows-defaults` to your
+`dotspacemacs-configuration-layers` variable in your `.spacemacs` file in the usual way.
+
 ### CUA mode
 
 [CUA mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/CUA-Bindings.html) is
@@ -72,7 +86,7 @@ quick-switch window in Visual Studio.
     M-c means "copy current line or the region's line"
     C-M-c means "duplicate current line or the region's lines"
     M-g means "go to something" (Spacemacs default key)
-    C-i means "indent buffer" aka. "format document"
+    C-i means "indent buffer" a.k.a. "format document"
     C-j means "delete all whitespace around point EXCEPT for a newline" - "j = join"
     M-j means "delete all whitespace around point"
     C-S-j means "delete all whitespace around point EXCEPT for one space"
@@ -92,7 +106,7 @@ the need to go to the beginning of the word before invoking it.
 ### Searching
 
     C-f means "find"
-    M-F means "regex find"
+    M-f means "regex find"
 
     C-r means "find backwards"
     M-r means "regex find backwards"
@@ -123,10 +137,11 @@ tries to find an idle shell to reuse, but creates a new one if none are availabl
 
 # TODO/BUGS
 
-* Visual Studio function keys.
-* better shell - make it use ansi-term instead?
-* better shell - bug whereby it gets sudo syntax wrong.
-* After exiting CUA rectangle mark mode C-z is no longer undo.
+* Visual Studio function keys - or defer such things
+  to [realgud](https://github.com/realgud/realgud), which has some VS-compatible
+  keybindings?
+* After exiting CUA rectangle mark mode C-z is no longer undo
+* M-q doesn't always toggle paragraph filling
 * Multiple cursors
 * TAGS / GNU Global
 * Code folding
